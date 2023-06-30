@@ -11,7 +11,7 @@ class Usuario(models.Model):
 class Categoria(models.Model):
     descripcion = models.CharField(max_length=100)
 
-class Item(models.Moddel):
+class Item(models.Model):
     nombre = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=300)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
