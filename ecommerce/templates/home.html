@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <h3>Hi {{ user.username }}! </h3>
+  <p>Bienvenido a la mi tienda</p>
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>Bienvenido a mi web</p>
+  <p>Inicia sesión, o crea una cuenta si no tienes una</p>
+  <a href="{% url 'login' %}">Iniciar Sesión</a> |
+  <a href="{% url 'core:signup' %}">Crear Cuenta</a>
+{% endif %}
+{% endblock %}
