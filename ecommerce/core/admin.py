@@ -17,7 +17,10 @@ class MyUserAdmin(UserAdmin):
             (None, {'fields': ('nombre', 'apellido')}),
     ) #this will allow to change these fields in admin module
 
+class ItemAdmin(admin.ModelAdmin):
+    list_filter = ("categoria",)
+
 
 admin.site.register(MyUser, MyUserAdmin)
-admin.site.register(Item)
+admin.site.register(Item, ItemAdmin)
 admin.site.register(Categoria)
