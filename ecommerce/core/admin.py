@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
+from core.models import* 
 
 # Register your models here.
 
@@ -18,3 +19,5 @@ class MyUserAdmin(UserAdmin):
 
 
 admin.site.register(MyUser, MyUserAdmin)
+admin.site.register(Item)
+admin.site.register(Categoria)
