@@ -1,0 +1,9 @@
+{% extends 'core/index.html' %}
+
+{% block productos %}
+<ul>
+    {% for resultado in resultados %}
+        <li>{{resultado.nombre}} - {{resultado.categoria}} </li>
+    {% endfor %}
+</ul>
+{% endblock %}

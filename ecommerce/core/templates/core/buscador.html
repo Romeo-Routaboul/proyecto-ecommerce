@@ -1,0 +1,13 @@
+{% extends 'core/index.html' %}
+
+{% block buscador %}
+<form action="/core/resultado/" method="get">
+    <p>
+
+        Buscar producto: <input type="text" name="nombre_item">
+        <input type="submit" value="Buscar">
+    </p>
+
+</form>
+
+{% endblock %}
