@@ -8,3 +8,5 @@ path("inicio/", inicio, name="inicio"),
 path("resultado/", resultado_busqueda_productos, name="resultado"),
 
 ]
+
+# esto es un cambio
