@@ -19,8 +19,6 @@ class SignUpView(CreateView):
 def inicio(request):
     return render (request, "core/index.html")
 
-def buscar(request):
-    return render (request, "core/buscador.html")
 
 def resultado_busqueda_productos(request):
     nombre_item = request.GET["nombre_item"]

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Shop Homepage - Start Bootstrap Template</title>
+        <title>Tienda Virtual</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -54,13 +54,21 @@
                 </div>
             </div>
         </header>
-        {% block buscador %}
-        {% endblock %}
+
+        <form action="/core/resultado/" method="get">
+            <p>
+        
+                Buscar producto: <input type="text" name="nombre_item">
+                <input type="submit" value="Buscar">
+            </p>
+        
+        </form>
+ 
         <!-- Section-->
-        {% block productos %}
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    {% block productos %}
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
@@ -76,7 +84,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ver mas</a></div>
                             </div>
                         </div>
                     </div>
@@ -261,10 +269,6 @@
             </div>
         </section>
         {% endblock %}
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
-        </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
