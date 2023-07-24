@@ -6,5 +6,6 @@ urlpatterns = [
 path("signup/", SignUpView.as_view(), name="signup"),
 path("inicio/", inicio, name="inicio"),
 path("resultado/", resultado_busqueda_productos, name="resultado"),
+path("detail/<pk>/", ItemDetail.as_view() , name="detail"),
 
 ]
