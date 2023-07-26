@@ -1,9 +1,13 @@
 {% extends 'core/index.html' %}
 
 {% block prd %}
-<p>Nombre: {{item.nombre}}</p>
-<p>Categoria: {{item.categoria}}</p>
-<p>Descripción: {{item.descripcion}}</p>
-<p>Precio: {{item.precio}}</p>
+<h2>Detalles del producto</h2>
+<ul>
+    <li>Nombre: {{item.nombre}}</li>
+    <li>Categoria: {{item.categoria}}</li>
+    <li>Descripción: {{item.descripcion}}</li>
+    <li>Precio: {{item.precio}}</li>
+
+</ul>
 
 {% endblock %}
