@@ -18,7 +18,8 @@ class SignUpView(CreateView):
     template_name = 'signup.html'
 
 def inicio(request):
-    return render (request, "core/index.html")
+    productos = Item.objects.all
+    return render (request, "core/index.html", {"productos": productos})
 
 
 def resultado_busqueda_productos(request):
