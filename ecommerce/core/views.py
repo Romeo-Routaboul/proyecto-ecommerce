@@ -24,9 +24,11 @@ def inicio(request):
 
 def resultado_busqueda_productos(request):
     nombre_item = request.GET["nombre_item"]
-
-    resultados = Item.objects.filter(nombre__icontains = nombre_item)
-    return render (request, "core/resultado-busqueda.html", {"resultados": resultados})
+    if len(nombre_item) >= 1:
+        resultados = Item.objects.filter(nombre__icontains = nombre_item)
+        return render (request, "core/resultado-busqueda.html", {"resultados": resultados})
+    else:
+        return render (request, "core/resultado-busqueda.html", {"resultados": []})
 
 class ItemDetail(DetailView):
     model = Item
