@@ -1,5 +1,8 @@
 from django.urls import path
-from core.views import*
+import ecommerce.settings as settings
+from django.conf.urls.static import static
+
+from core.views import SignUpView, ItemDetail, resultado_busqueda_productos, inicio
 
 urlpatterns = [
 #path("", inicio, name="inicio"),

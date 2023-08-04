@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
+import ecommerce.settings as settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -26,3 +28,6 @@ urlpatterns = [
     path('core/', include('core.urls')),
     path('core/', include('django.contrib.auth.urls')),
 ]
+
+# Agregar las URLs de archivos estaticos
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

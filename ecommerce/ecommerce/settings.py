@@ -128,3 +128,8 @@ AUTH_USER_MODEL = 'core.MyUser'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+# PARA IMAGENES
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

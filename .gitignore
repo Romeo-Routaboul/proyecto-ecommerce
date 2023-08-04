@@ -166,3 +166,8 @@ cython_debug/
 
 #VS code debug
 .vscode/
+
+Imagenes/
+
+ecommerce/media/
+
