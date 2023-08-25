@@ -15,6 +15,7 @@ class SignUpView(CreateView):
     success_url = reverse_lazy('login')
     template_name = 'signup.html'
 
+@login_required
 def inicio(request):
     productos = Item.objects.all()
 
@@ -36,7 +37,7 @@ class ItemDetail(DetailView):
 def carrito(request):
     return render (request, "core/carrito.html")
 
-@login_required
+
 def iniciar_sesion (request):
 
     errors = ""
@@ -67,12 +68,16 @@ def registrarse (request):
         formulario = MyUserCreationForm(request.POST)
         if formulario.is_valid():
             formulario.save()
-            return redirect ("inicio")
+            return redirect ("signup-exitoso")
         else:
             return render (request, "core/signup.html", {"form": formulario, "errors": formulario.errors})
 
     formulario = MyUserCreationForm()
     return render (request, "core/signup.html", {"form": formulario})
+
+def signup_finalizado(request):
+    return render (request, "core/signup_exitoso.html")
+
 
 
 

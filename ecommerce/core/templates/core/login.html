@@ -1,15 +1,16 @@
 {% extends 'core/index.html' %}
 
+
 {% block prd %}
 
-<div><h2>Login</h2></div>
+<div><h2>Iniciar sesion</h2></div>
 {% if errors %}
     <p style="color: rgb(176, 10, 10);">Errores en el inicio de sesión</p>
 {% endif %}
 <form method="post">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit">Login</button>
+    <button type="submit">Iniciar sesión</button>
 </form>
 
 
