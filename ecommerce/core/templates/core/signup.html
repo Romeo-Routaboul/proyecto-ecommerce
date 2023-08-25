@@ -1,0 +1,19 @@
+{% extends 'core/index.html' %}
+{% block prd %}
+
+{% if errors %}
+<h3 style="color: rgb(176, 10, 10);">Errores en el registro, revise los datos ingresados</h3>
+
+{% endif %}
+
+<form method="post">
+
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input type="submit" value="Registrar usuario">
+</form>
+
+
+
+{% endblock %}

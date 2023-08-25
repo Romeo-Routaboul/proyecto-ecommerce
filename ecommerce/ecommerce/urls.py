@@ -22,11 +22,8 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('admin/', admin.site.urls),
-    # path("core/", include("core.urls")),
-    path('core/', include('core.urls')),
-    path('core/', include('django.contrib.auth.urls')),
+    path('', include('core.urls')),
 ]
 
 # Agregar las URLs de archivos estaticos
