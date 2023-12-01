@@ -1,6 +1,8 @@
 {% extends 'core/index.html' %}
 
-
-
-
+{% block prd %}
+<h2>{{user.nombre}}</h2>
+{% for item in user.carrito.items.all %}
+<ul>{{item.nombre}} </ul>
+{% endfor %}
 {% endblock %}

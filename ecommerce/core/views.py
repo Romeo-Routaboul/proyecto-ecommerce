@@ -35,6 +35,7 @@ class ItemDetail(DetailView):
     template_name = "core/detail_item.html"
 
 def carrito(request):
+    
     return render (request, "core/carrito.html")
 
 

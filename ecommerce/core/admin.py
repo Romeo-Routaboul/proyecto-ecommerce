@@ -24,3 +24,4 @@ class ItemAdmin(admin.ModelAdmin):
 admin.site.register(MyUser, MyUserAdmin)
 admin.site.register(Item, ItemAdmin)
 admin.site.register(Categoria)
+admin.site.register(Carrito)
